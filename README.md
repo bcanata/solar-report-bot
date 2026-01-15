@@ -1,5 +1,7 @@
 # Solar Report Bot ☀️
 
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/bcanata/solar-report-bot)
+
 A Cloudflare Worker that automatically posts daily solar data reports to a Telegram group. Designed for amateur radio operators to monitor solar conditions that affect radio propagation.
 
 ## Features
