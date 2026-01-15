@@ -1,4 +1,4 @@
-# Telsiz Grup Cron Botu 📡
+# Solar Report Bot ☀️
 
 A Cloudflare Worker that automatically posts daily solar data reports to a Telegram group. Designed for amateur radio operators to monitor solar conditions that affect radio propagation.
 
@@ -14,7 +14,7 @@ A Cloudflare Worker that automatically posts daily solar data reports to a Teleg
 
 The worker triggers on a cron schedule (`0 8 * * *` = daily at 8 AM UTC) and:
 
-1. Sends a text message "Günlük Solar Veriler:" to the target Telegram group
+1. Sends a text message to the target Telegram group
 2. Fetches and posts a solar propagation chart from `hamqsl.com/solarvhf.php`
 3. Reports any errors to the configured master user
 
@@ -42,8 +42,8 @@ wrangler login
 ### 3. Clone or Download This Repository
 
 ```bash
-git clone https://github.com/yourusername/telsizgrupcronbotu.git
-cd telsizgrupcronbotu
+git clone https://github.com/bcanata/solar-report-bot.git
+cd solar-report-bot
 ```
 
 ### 4. Configure Environment Secrets
@@ -70,7 +70,7 @@ wrangler deploy
 The worker is configured via `wrangler.toml`:
 
 ```toml
-name = "telsizgrupcronbotu"
+name = "solar-report-bot"
 main = "index.js"
 compatibility_date = "2024-01-01"
 account_id = "your-account-id"
@@ -124,7 +124,7 @@ wrangler versions list
 ## Project Structure
 
 ```
-telsizgrupcronbotu/
+solar-report-bot/
 ├── index.js          # Main worker code
 ├── wrangler.toml     # Cloudflare Workers configuration
 ├── CLAUDE.md         # Development documentation
@@ -157,7 +157,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## About
 
-This bot was created for the Turkish amateur radio community to help monitor daily solar conditions that affect HF/VHF propagation. Solar data is sourced from [HamQSL](https://www.hamqsl.com/solar.html).
+This bot was created to help amateur radio operators monitor daily solar conditions that affect HF/VHF propagation. Solar data is sourced from [HamQSL](https://www.hamqsl.com/solar.html).
 
 ---
 
