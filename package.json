@@ -1,0 +1,19 @@
+{
+  "name": "solar-report-bot",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker for automated daily solar data reports to Telegram",
+  "private": true,
+  "cloudflare": {
+    "bindings": {
+      "TELEGRAM_BOT_TOKEN": {
+        "description": "Your Telegram bot token. Get it by messaging @BotFather on Telegram and using /newbot"
+      },
+      "TARGET_CHAT_ID": {
+        "description": "The Telegram group chat ID where solar reports will be posted (e.g., -1001415136439). Add your bot to the group first, then visit https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates to find the chat.id"
+      },
+      "MASTER_ID": {
+        "description": "Your personal Telegram user ID for receiving error notifications. Get your ID by messaging @userinfobot on Telegram"
+      }
+    }
+  }
+}
