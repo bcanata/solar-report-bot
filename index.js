@@ -141,7 +141,7 @@ async function sendSolarReport(scheduledTime, env) {
             photo: `${config.solarDataUrl}?t=${Date.now()}`
         }, env);
 
-        console.log(`Solar report sent at ${scheduledTime.toISOString()}`);
+        console.log(`Solar report sent at ${scheduledTime}`);
         return new Response('OK', { status: 200 });
 
     } catch (error) {
